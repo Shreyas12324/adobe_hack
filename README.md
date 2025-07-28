@@ -39,3 +39,12 @@ Each output JSON has the following structure:
     { "level": "H3", "text": "History of AI", "page": 3 }
   ]
 }
+
+docker build --platform linux/amd64 -t mysolutionname:somerandomid .
+
+docker run --rm \
+  -v $(pwd)/input:/app/input \
+  -v $(pwd)/output:/app/output \
+  --network none \
+  mysolutionname:somerandomid
+
